@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minesweeper Cricket Game</title>
+    <link rel="stylesheet" href="game2.css">
+</head>
+
+<body>
+    <h1 style="text-shadow: 2px 2px 5px white; text-align:center">Minesweeper Cricket</h1>
+
+    
+    <div class="col-3" id="scores">
+        <div id="score1">Player 1 Score: 0</div>
+        <br><br><br><br>
+        <div id="score2">Player 2 Score: 0</div>
+    </div>
+    <div id="game-board" class="col-5">
+        <!-- The game board will be dynamically created here using JavaScript -->
+    </div>
+    
+    <div class="col-3">
+        <h2 style="text-align: center;">Rules for 2 player game</h2>
+        <div style="padding-top: 50px; padding-left:20px">
+            <ul>
+                <li>
+                    Player 2 has to set the fielders first.
+                </li>
+                <li>
+                    Player 1 bats first. <br> There will be no different scores on each cell in this mode. <br> On
+                    each square selected which is not a fielder you score 1 run.
+                </li>
+                <li>
+                    After player 1 has finished batting , player 1 needs to set the fielding.
+                </li>
+                <li>
+                    Player 2 needs to bat now. <br> The winner is decided on who scores more.
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="game2.js"></script> <!-- Link to the JavaScript file for game logic -->
+
+</body>
+
+
+</html>

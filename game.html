@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minesweeper Cricket Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <h1 style="text-shadow: 2px 2px 5px white; text-align:center">Minesweeper Cricket</h1>
+    
+    <div class="col-3">
+        <h2 style="text-align: center;">Rules for 1 player game</h2>
+        <div style= "padding-top: 50px; padding-left:20px">
+            <ul>
+                <li>
+                    Select the grid size you want to play on beside.
+                </li>
+                <li>
+                    On the grid, there will be 11 random fielders alloted randomly.
+                </li>
+                <li>
+                    If you click on a square which is not fielder you will gain some score depending on the score alloted to that cell of the grid like 1, 2, 3, 4 or 6.
+                </li>
+                <li>
+                    Game Winning Condition : You should select all the squares without fielders.
+                </li>
+                <li>
+                    Game Losing Condition : If you select a square containing fielder.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="game-board" class="col-5">
+        <!-- The game board will be dynamically created here using JavaScript -->
+    </div>
+    
+    <div class="col-3" id="scores">
+        <div id="score">Score: 0</div><br><br><br><br>
+        <div id="highScore">highScore: 0</div>
+    </div>
+
+    <script src="game.js"></script> <!-- Link to the JavaScript file for game logic -->
+    
+</body>
+
+
+</html>

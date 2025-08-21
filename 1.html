@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minesweeper Cricket</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <h1 style="text-shadow: 2px 2px 5px white; text-align:center; padding-top:50px ">Minesweeper Cricket</h1>
+    <div class="col-3">
+        <h2 style="text-align: center;">Rules for 1 player game</h2>
+        <div style="padding-top: 50px; padding-left:20px">
+            <ul>
+                <li>
+                    Select the grid size you want to play on beside.
+                </li>
+                <li>
+                    On the grid, there will be 11 random fielders alloted randomly.
+                </li>
+                <li>
+                    If you click on a square which is not fielder you will gain some score depending on the score
+                    alloted to that cell of the grid like 1, 2, 3, 4 or 6.
+                </li>
+                <li>
+                    Game Winning Condition : You should select all the squares without fielders.
+                </li>
+                <li>
+                    Game Losing Condition : If you select a square containing fielder.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="game-container" style="text-align:center;" class="col-5">
+        <br><br><br><br><br><br>
+        <div id="player-options">
+            <button class="player-button" onclick="showGridSizeOptions(1)">
+                <span class="button-text">1 Player</span>
+            </button>
+            <div id="size-buttons" style="visibility: hidden;">
+                <button class="size-button" onclick="redirectToGame(6)">6x6</button>
+                <button class="size-button" onclick="redirectToGame(7)">7x7</button>
+                <button class="size-button" onclick="redirectToGame(8)">8x8</button>
+                <button class="size-button" onclick="redirectToGame(9)">9x9</button>
+                <button class="size-button" onclick="redirectToGame(10)">10x10</button>
+            </div>
+        </div>
+        <div id="player-options">
+            <button class="player-button" onclick="showGridSizeOptions(2)">
+                <span class="button-text">2 Player</span>
+            </button>
+            <div id="size-buttons-2" style="visibility:hidden;">
+                <button class="size-button" onclick="redirectToGame2(6)">6x6</button>
+                <button class="size-button" onclick="redirectToGame2(7)">7x7</button>
+                <button class="size-button" onclick="redirectToGame2(8)">8x8</button>
+                <button class="size-button" onclick="redirectToGame2(9)">9x9</button>
+                <button class="size-button" onclick="redirectToGame2(10)">10x10</button>
+            </div>
+        </div>
+        <div id="game-board"></div>
+    </div>
+    <div class="col-3">
+        <h2 style="text-align: center;">Rules for 2 player game</h2>
+        <div style="padding-top: 50px; padding-left:20px">
+            <ul>
+                <li>
+                    Player 2 has to set the fielders first.
+                </li>
+                <li>
+                    Player 1 bats first. <br> There will be no different scores on each cell in this mode. <br> On
+                    each square selected which is not a fielder you score 1 run.
+                </li>
+                <li>
+                    After player 1 has finished batting , player 1 needs to set the fielding.
+                </li>
+                <li>
+                    Player 2 needs to bat now. <br> The winner is decided on who scores more.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        function showGridSizeOptions(playerCount) {
+            if (playerCount === 1) {
+                if (document.getElementById("size-buttons").style.visibility === "hidden") {
+                    document.getElementById("size-buttons").style.visibility = "visible";
+                } else {
+                    document.getElementById("size-buttons").style.visibility = "hidden";
+                }
+            } else if (playerCount === 2) {
+                if (document.getElementById("size-buttons-2").style.visibility === "hidden") {
+                    document.getElementById("size-buttons-2").style.visibility = "visible";
+                } else {
+                    document.getElementById("size-buttons-2").style.visibility = "hidden";
+                }
+            }
+        }
+
+        function redirectToGame(size) {
+            let url = "game.html?size=" + size;  // Replace "game.html" with the destination page URL
+            window.location.href = url;
+        }
+
+        function redirectToGame2(size2) {
+            let url2 = "game2.html?size2=" + size2;
+            window.location.href = url2;
+        }
+    </script>
+
+
+</body>
+
+
+</html>
